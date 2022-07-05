@@ -1,0 +1,45 @@
+.messaging {
+  width: 100%;
+  min-height: 3em;
+  border-bottom: solid 5px #AFAFAF;
+  background-color: #F7F7F6;
+  padding-bottom: 30px;
+  margin-bottom: 16px;
+  float: left;
+}
+.error {
+  display: none;
+}
+.messaging .messaging-wrapper {
+  width: 95%;
+  margin: 0 auto;
+  padding: 8px;
+  text-align: center;
+  color: #000;
+}
+.messaging .messaging-wrapper p {
+  color: #000;
+  margin-bottom: 10px;
+}
+.messaging .messaging-wrapper a {
+  color: #1400ff;
+}
+ .messaging .messaging-wrapper .icon {
+  display: block;
+  float: left;
+  width: 32px;
+  height: 32px;
+  margin: 8px 8px 0 0;
+}
+.messaging .messaging-wrapper .iconerror {
+  background: url(../images/ico-ind-sign-on-error-mob-32x32-000000-v01_00@1x.png) no-repeat;
+  overflow: hidden;
+  text-indent: -10000px;
+}
+ .message {
+  font-size: 12px;
+  color: #000;
+  text-align: left;
+  float: right;
+  width: 85%;
+}
